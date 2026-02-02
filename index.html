@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   name.split("").forEach((char, i) => {
     const span = document.createElement("span");
     span.textContent = char;
-    span.style.animationDelay = `${i * 0.15 + 0.5}s`; // delay per huruf
+    span.style.animationDelay = `${i * 0.60 + 0.10}s`; // delay per huruf
     nameEl.appendChild(span);
   });
 
@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="loader__text">Loading portfolio…</p>
     </div>
   </div>
+  <!-- end -->
 
   <!-- ====== Background Effects ====== -->
   <div class="bg" aria-hidden="true">
@@ -324,15 +325,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <div class="stats card glass">
               <div class="stats__item">
-                <p class="stats__num" data-count="28">0</p>
+                <p class="stats__num" data-count="20">0</p>
                 <p class="stats__label muted">Projects Completed</p>
               </div>
               <div class="stats__item">
-                <p class="stats__num" data-count="3">0</p>
+                <p class="stats__num" data-count="2">0</p>
                 <p class="stats__label muted">Years Learning</p>
               </div>
               <div class="stats__item">
-                <p class="stats__num" data-count="42">0</p>
+                <p class="stats__num" data-count="20">0</p>
                 <p class="stats__label muted">GitHub Repos</p>
               </div>
             </div>
@@ -352,6 +353,8 @@ document.addEventListener("DOMContentLoaded", () => {
           </p>
         </div>
 
+        <!-- skill card -->
+
         <div class="skills__grid">
           <!-- Frontend -->
           <div class="skills__col reveal">
@@ -366,10 +369,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-brands fa-html5"></i>
                   <span>HTML</span>
                 </div>
-                <span class="skill__level">95%</span>
+                <span class="skill__level">50%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 95%"></div>
+                <div class="bar__fill" style="width: 50%"></div>
               </div>
             </div>
 
@@ -379,10 +382,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-brands fa-css3-alt"></i>
                   <span>CSS</span>
                 </div>
-                <span class="skill__level">92%</span>
+                <span class="skill__level">50%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 92%"></div>
+                <div class="bar__fill" style="width: 50%"></div>
               </div>
             </div>
 
@@ -392,10 +395,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-brands fa-js"></i>
                   <span>JavaScript</span>
                 </div>
-                <span class="skill__level">88%</span>
+                <span class="skill__level">35%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 88%"></div>
+                <div class="bar__fill" style="width: 35%"></div>
               </div>
             </div>
           </div>
@@ -413,10 +416,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-brands fa-php"></i>
                   <span>PHP</span>
                 </div>
-                <span class="skill__level">90%</span>
+                <span class="skill__level">50%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 90%"></div>
+                <div class="bar__fill" style="width: 50%"></div>
               </div>
             </div>
 
@@ -426,10 +429,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-solid fa-layer-group"></i>
                   <span>Laravel</span>
                 </div>
-                <span class="skill__level">87%</span>
+                <span class="skill__level">40%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 87%"></div>
+                <div class="bar__fill" style="width: 40%"></div>
               </div>
             </div>
 
@@ -439,10 +442,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-solid fa-database"></i>
                   <span>MySQL</span>
                 </div>
-                <span class="skill__level">85%</span>
+                <span class="skill__level">60%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 85%"></div>
+                <div class="bar__fill" style="width: 60%"></div>
               </div>
             </div>
           </div>
@@ -460,10 +463,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-brands fa-git-alt"></i>
                   <span>Git & GitHub</span>
                 </div>
-                <span class="skill__level">90%</span>
+                <span class="skill__level">70%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 90%"></div>
+                <div class="bar__fill" style="width: 70%"></div>
               </div>
             </div>
 
@@ -473,10 +476,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-solid fa-server"></i>
                   <span>XAMPP</span>
                 </div>
-                <span class="skill__level">86%</span>
+                <span class="skill__level">70%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 86%"></div>
+                <div class="bar__fill" style="width: 70%"></div>
               </div>
             </div>
 
@@ -486,10 +489,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-solid fa-screwdriver-wrench"></i>
                   <span>Debugging</span>
                 </div>
-                <span class="skill__level">92%</span>
+                <span class="skill__level">90%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 92%"></div>
+                <div class="bar__fill" style="width: 90%"></div>
               </div>
             </div>
           </div>
@@ -525,26 +528,30 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="projects__grid" id="projectsGrid">
           <!-- Project Cards (8) -->
           <article class="project card glass reveal" data-category="webapp"
-            data-title="Laravel CRM Dashboard"
-            data-description="A premium CRM dashboard with authentication, role management, analytics widgets, and responsive layout."
-            data-features="Role-based access control,Reusable components,Responsive analytics dashboard,Optimized queries"
-            data-tech="Laravel,PHP,MySQL,JavaScript"
+            data-title="Mini Game with Python"
+            data-description="each plane level is different and the ammo is also different, the higher the level the more difficult the game"
+            data-features="python programming,Pygame library,Interactive gameplay,Score tracking"
+            data-tech="Python,Pygame"
             data-live="#"
             data-github="#"
           >
-            <div class="project__media">
-              <img src="assets/project-1.jpg" alt="Project preview 1" loading="lazy" />
+            <div class="slider">
+              <img src="projek1/image.png" class="slide active"/>
+              <img src="projek1/image1.png" class="slide"/>
+              <img src="projek1/image2.png" class="slide"/>
+              <img src="projek1/image3.png" class="slide"/>
+              <img src="projek1/image4.png" class="slide"/>
               <span class="project__tag">Web App</span>
             </div>
             <div class="project__body">
-              <h3 class="project__title">Laravel CRM Dashboard</h3>
+              <h3 class="project__title">Galaxy Defender</h3>
               <p class="project__desc muted">
-                Clean dashboard UI with scalable backend structure.
+                A mini game built with Python and Pygame.
               </p>
 
               <div class="badges">
-                <span class="badge-pill">Laravel</span>
-                <span class="badge-pill">MySQL</span>
+                <span class="badge-pill">Python</span>
+                <span class="badge-pill">Pygame</span>
                 <span class="badge-pill">UI</span>
               </div>
 
@@ -960,9 +967,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="timeline__dot"></div>
             <div class="timeline__content">
               <p class="timeline__year">2025</p>
-              <h3 class="timeline__title">Improved UI/UX & deployed projects</h3>
+              <h3 class="timeline__title">Enter the workforce</h3>
               <p class="muted">
-                Focused on premium UI, micro-interactions, performance, and deployment-ready workflows.
+                I worked on several website and application projects for someone who used my services
               </p>
             </div>
           </div>
@@ -1166,7 +1173,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a class="social__link" href="https://github.com/faizarsyadd" aria-label="GitHub" target="_blank" rel="noopener">
                   <i class="fa-brands fa-github"></i>
                 </a>
-                <a class="social__link" href="https://instagram.com/faizarsyadd" aria-label="Instagram" target="_blank" rel="noopener">
+                <a class="social__link" href="https://instagram.com/faizarsyyad_" aria-label="Instagram" target="_blank" rel="noopener">
                   <i class="fa-brands fa-instagram"></i>
                 </a>
                 <a class="social__link" href="https://www.linkedin.com/in/faiz-as-490a36186/" aria-label="LinkedIn" target="_blank" rel="noopener">
@@ -1185,13 +1192,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
               <div class="field">
                 <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your full name" autocomplete="name" required />
+                <input id="name" name="name" type="text" placeholder="full name" autocomplete="name" required />
                 <small class="error" data-error-for="name"></small>
               </div>
 
               <div class="field">
                 <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required />
+                <input id="email" name="email" type="email" placeholder="email.com" autocomplete="email" required />
                 <small class="error" data-error-for="email"></small>
               </div>
 
@@ -1227,7 +1234,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <a class="social__link" href="https://github.com/faizarsyadd" aria-label="GitHub" target="_blank" rel="noopener">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a class="social__link" href="https://instagram.com/faizarsyadd" aria-label="Instagram" target="_blank" rel="noopener">
+        <a class="social__link" href="https://instagram.com/faizarsyyad_" aria-label="Instagram" target="_blank" rel="noopener">
           <i class="fa-brands fa-instagram"></i>
         </a>
         <a class="social__link" href="https://www.linkedin.com/in/faiz-as-490a36186/" aria-label="LinkedIn" target="_blank" rel="noopener">

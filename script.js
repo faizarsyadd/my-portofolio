@@ -48,8 +48,10 @@ window.addEventListener("load", () => {
   const loader = $("#loader");
   setTimeout(() => {
     loader.classList.add("hidden");
-  }, 550);
+  }, 3000); // Fallback hide after 5s
 });
+// load welcome end
+
 
 /* =========================
    Footer Year
@@ -314,6 +316,29 @@ filterButtons.forEach((btn) => {
     applyFilter(btn.dataset.filter);
   });
 });
+
+
+// =========================
+// Auto Slider + Smooth Transition
+// =========================
+const sliders = document.querySelectorAll(".slider");
+
+sliders.forEach((slider) => {
+  const slides = slider.querySelectorAll(".slide");
+  let index = 0;
+
+  slides.forEach((s) => s.classList.remove("active"));
+  slides[0].classList.add("active");
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 1000); // 1 detik
+});
+
+
+
 
 /* =========================
    Project Modal
