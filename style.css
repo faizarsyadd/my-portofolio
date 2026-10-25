@@ -123,15 +123,17 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
+  position: relative;
+  isolation: isolate;
   margin: 0;
   font-family: var(--font-sans);
-  background: radial-gradient(1200px 700px at 10% 10%, rgba(124, 92, 255, 0.20), transparent 60%),
-              radial-gradient(900px 600px at 90% 30%, rgba(46, 229, 157, 0.14), transparent 55%),
-              linear-gradient(180deg, var(--bg), var(--bg-2));
+  background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
 }
+
 
 /* Accessibility */
 :focus-visible {
@@ -235,67 +237,183 @@ button {
   border-color: rgba(124, 92, 255, 0.25);
 }
 
-/* ====== Background FX ====== */
+
+/* ====== CINEMATIC DEEP SPACE GALAXY ====== */
+
 .bg {
   position: fixed;
   inset: 0;
-  z-index: -2;
+  z-index: -1;
+  overflow: hidden;
   pointer-events: none;
+  isolation: isolate;
+  background: #03040b;
 }
 
+/* Main galaxy nebula */
 .bg__gradient {
   position: absolute;
-  inset: 0;
+  inset: -15%;
+
   background:
-    radial-gradient(800px 600px at 20% 10%, rgba(124, 92, 255, 0.22), transparent 60%),
-    radial-gradient(700px 520px at 80% 25%, rgba(46, 229, 157, 0.18), transparent 55%),
-    radial-gradient(600px 500px at 60% 85%, rgba(255, 77, 109, 0.10), transparent 60%);
-  filter: blur(12px);
-  opacity: 0.9;
+    radial-gradient(
+      ellipse 20% 24% at 51% 43%,
+      rgba(190, 203, 255, 0.24) 0%,
+      rgba(133, 116, 255, 0.18) 28%,
+      rgba(84, 64, 220, 0.08) 52%,
+      transparent 75%
+    ),
+    radial-gradient(
+      ellipse 40% 29% at 27% 37%,
+      rgba(112, 39, 255, 0.27) 0%,
+      rgba(90, 35, 190, 0.13) 42%,
+      transparent 75%
+    ),
+    radial-gradient(
+      ellipse 34% 25% at 82% 26%,
+      rgba(0, 176, 255, 0.19) 0%,
+      rgba(34, 85, 220, 0.10) 45%,
+      transparent 76%
+    ),
+    radial-gradient(
+      ellipse 30% 24% at 73% 76%,
+      rgba(224, 54, 180, 0.15) 0%,
+      rgba(112, 44, 190, 0.07) 48%,
+      transparent 78%
+    ),
+    radial-gradient(
+      ellipse 42% 35% at 8% 88%,
+      rgba(27, 65, 180, 0.15) 0%,
+      transparent 75%
+    ),
+    linear-gradient(
+      135deg,
+      #03040b 0%,
+      #080719 38%,
+      #070b1b 70%,
+      #02040b 100%
+    );
+
+  filter: blur(22px);
+  opacity: 1;
+  transform: translateZ(0);
 }
 
-.blob {
+/* Subtle galactic rays */
+.bg__gradient::before {
+  content: "";
   position: absolute;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  filter: blur(38px);
-  opacity: 0.35;
-  animation: floaty 9s var(--ease-soft) infinite;
+  inset: 0;
+
+  background: repeating-conic-gradient(
+    from 12deg at 51% 43%,
+    transparent 0deg 13deg,
+    rgba(151, 154, 255, 0.035) 14deg 15deg,
+    transparent 16deg 27deg
+  );
+
+  -webkit-mask-image: radial-gradient(
+    ellipse at 51% 43%,
+    #000 0%,
+    transparent 58%
+  );
+
+  mask-image: radial-gradient(
+    ellipse at 51% 43%,
+    #000 0%,
+    transparent 58%
+  );
+
+  opacity: 0.8;
 }
 
-.blob--1 {
-  left: -120px;
-  top: 120px;
-  background: rgba(124, 92, 255, 0.55);
+/* Fine star dust */
+.bg__gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(1px 1px at 8% 16%, rgba(255,255,255,.85) 50%, transparent 100%),
+    radial-gradient(1px 1px at 19% 67%, rgba(170,190,255,.75) 50%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 34% 23%, rgba(255,255,255,.75) 50%, transparent 100%),
+    radial-gradient(1px 1px at 48% 79%, rgba(190,200,255,.75) 50%, transparent 100%),
+    radial-gradient(1px 1px at 62% 13%, rgba(255,255,255,.8) 50%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 76% 53%, rgba(170,200,255,.8) 50%, transparent 100%),
+    radial-gradient(1px 1px at 89% 31%, rgba(255,255,255,.8) 50%, transparent 100%),
+    radial-gradient(1px 1px at 94% 84%, rgba(180,190,255,.7) 50%, transparent 100%);
+
+  background-size: 420px 340px;
+  opacity: 0.55;
 }
 
-.blob--2 {
-  right: -120px;
-  top: 240px;
-  background: rgba(46, 229, 157, 0.42);
-  animation-duration: 11s;
+/* Disable the old generic colored blobs */
+.bg .blob {
+  display: none;
 }
 
-.blob--3 {
-  left: 20%;
-  bottom: -160px;
-  background: rgba(255, 204, 102, 0.30);
-  animation-duration: 12s;
-}
-
-@keyframes floaty {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(20px, -18px) scale(1.06); }
-}
-
+/* Film-like noise texture */
 .noise {
   position: absolute;
   inset: 0;
+
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
-  opacity: 0.08;
-  mix-blend-mode: overlay;
+
+  opacity: 0.045;
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
+
+/* Slow, cinematic galaxy movement */
+@keyframes galaxy-drift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-1%, 0.8%, 0) scale(1.035);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bg__gradient {
+    animation: galaxy-drift 38s ease-in-out infinite;
+  }
+}
+
+/* Light theme background */
+[data-theme="light"] .bg {
+  opacity: 0.22;
+}
+
+[data-theme="light"] .bg__gradient {
+  animation: none;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .bg__gradient {
+    inset: -8%;
+    filter: blur(26px);
+    animation: none;
+  }
+
+  .bg__gradient::before {
+    opacity: 0.45;
+  }
+
+  .bg__gradient::after {
+    opacity: 0.4;
+  }
+}
+
+/* Accessibility: reduce animations */
+@media (prefers-reduced-motion: reduce) {
+  .bg__gradient {
+    animation: none !important;
+  }
+}
+
 
 /* ====== Loader ====== */
 .loader {
