@@ -20,7 +20,7 @@
 /* =========================
    Config
 ========================= */
-const githubUsername = "yourusername"; // <-- Change this to your GitHub username
+const githubUsername = "faizarsyadd"; // <-- Change this to your GitHub username
 
 /* =========================
    Helpers

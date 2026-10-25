@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <!--
-    Premium Personal Portfolio
-    Author: Your Name
-    Tech: Pure HTML, CSS, JavaScript (No frameworks)
-  -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#050711" />
 
-  <title>Faiz.dev — My Portfolio</title>
-  <meta name="description" content="Premium personal portfolio website for a Full Stack Developer (Laravel, PHP, JavaScript)." />
+  <title>Faiz.dev — Portofolio Saya</title>
+  <meta name="description" content="Website portofolio pribadi untuk Pengembang Full Stack (Laravel, PHP, JavaScript)." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +33,7 @@
     <div class="preloader__logo">
       <i class="fa-solid fa-code"></i>
     </div>
-    <h1 class="preloader__name" id="preloaderName">faiz.dev</h1>
+    <h1 class="preloader__name" id="preloaderNama">faiz.dev</h1>
   </div>
 </div>
 
@@ -46,7 +42,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const name = "Faiz.dev";
-  const nameEl = document.getElementById("preloaderName");
+  const nameEl = document.getElementById("preloaderNama");
 
   // Hapus text dulu, buat span per huruf
   nameEl.textContent = "";
@@ -75,13 +71,20 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader__card glass">
       <div class="loader__spinner" aria-hidden="true"></div>
-      <p class="loader__text">Loading portfolio…</p>
+      <p class="loader__text">Memuat portofolio…</p>
     </div>
   </div>
   <!-- end -->
 
   <!-- ====== Background Effects ====== -->
   <div class="bg" aria-hidden="true">
+    <div class="bg__stars"></div>
+    <div class="bg__nebula"></div>
+    <div class="bg__planet"><span></span></div>
+    <div class="bg__orbit bg__orbit--one"></div>
+    <div class="bg__orbit bg__orbit--two"></div>
+    <div class="bg__shooting-star bg__shooting-star--one"></div>
+    <div class="bg__shooting-star bg__shooting-star--two"></div>
     <div class="bg__gradient"></div>
     <div class="blob blob--1"></div>
     <div class="blob blob--2"></div>
@@ -95,44 +98,44 @@ document.addEventListener("DOMContentLoaded", () => {
       <i class="fa-solid fa-circle-check"></i>
     </div>
     <div class="toast__content">
-      <p class="toast__title" id="toastTitle">Success</p>
-      <p class="toast__message" id="toastMessage">Your message has been sent.</p>
+      <p class="toast__title" id="toastTitle">Berhasil</p>
+      <p class="toast__message" id="toastPesan">Pesan kamu berhasil dikirim.</p>
     </div>
-    <button class="toast__close" id="toastClose" aria-label="Close notification">
+    <button class="toast__close" id="toastClose" aria-label="Tutup notifikasi">
       <i class="fa-solid fa-xmark"></i>
     </button>
   </div>
 
   <!-- ====== Back To Top ====== -->
-  <button class="backtop" id="backToTop" aria-label="Back to top">
+  <button class="backtop" id="backToTop" aria-label="Kembali ke atas">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
   <!-- ====== Header / Navbar ====== -->
   <header class="header" id="header">
-    <nav class="nav container" aria-label="Primary">
-      <a class="logo" href="#home" aria-label="Go to Home">
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a class="logo" href="#home" aria-label="Kembali ke Beranda">
         <span class="logo__dot"></span>
         <span class="logo__text">Faiz.dev</span>
       </a>
 
       <div class="nav__links" id="navLinks">
-        <a class="nav__link active" href="#home">Home</a>
-        <a class="nav__link" href="#about">About</a>
-        <a class="nav__link" href="#skills">Skills</a>
-        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link active" href="#home">Beranda</a>
+        <a class="nav__link" href="#about">Tentang</a>
+        <a class="nav__link" href="#skills">Keahlian</a>
+        <a class="nav__link" href="#projects">Proyek</a>
         <a class="nav__link" href="#github">GitHub</a>
-        <a class="nav__link" href="#timeline">Timeline</a>
-        <a class="nav__link" href="#testimonials">Testimonials</a>
-        <a class="nav__link" href="#contact">Contact</a>
+        <a class="nav__link" href="#timeline">Perjalanan</a>
+        <a class="nav__link" href="#testimonials">Testimoni</a>
+        <a class="nav__link" href="#contact">Kontak</a>
       </div>
 
       <div class="nav__actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark/light mode">
+        <button class="icon-btn" id="themeToggle" aria-label="Ubah mode gelap/terang">
           <i class="fa-solid fa-moon" id="themeIcon"></i>
         </button>
 
-        <button class="icon-btn nav__burger" id="menuToggle" aria-label="Open mobile menu" aria-expanded="false">
+        <button class="icon-btn nav__burger" id="menuToggle" aria-label="Buka menu seluler" aria-expanded="false">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -143,24 +146,24 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="mobile-menu__panel glass">
         <div class="mobile-menu__top">
           <span class="mobile-menu__title">Menu</span>
-          <button class="icon-btn" id="menuClose" aria-label="Close mobile menu">
+          <button class="icon-btn" id="menuClose" aria-label="Tutup menu seluler">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
 
         <div class="mobile-menu__links">
-          <a class="mobile-menu__link" href="#home">Home</a>
-          <a class="mobile-menu__link" href="#about">About</a>
-          <a class="mobile-menu__link" href="#skills">Skills</a>
-          <a class="mobile-menu__link" href="#projects">Projects</a>
+          <a class="mobile-menu__link" href="#home">Beranda</a>
+          <a class="mobile-menu__link" href="#about">Tentang</a>
+          <a class="mobile-menu__link" href="#skills">Keahlian</a>
+          <a class="mobile-menu__link" href="#projects">Proyek</a>
           <a class="mobile-menu__link" href="#github">GitHub</a>
-          <a class="mobile-menu__link" href="#timeline">Timeline</a>
-          <a class="mobile-menu__link" href="#testimonials">Testimonials</a>
-          <a class="mobile-menu__link" href="#contact">Contact</a>
+          <a class="mobile-menu__link" href="#timeline">Perjalanan</a>
+          <a class="mobile-menu__link" href="#testimonials">Testimoni</a>
+          <a class="mobile-menu__link" href="#contact">Kontak</a>
         </div>
 
         <div class="mobile-menu__footer">
-          <p class="muted">Built with clean HTML, CSS & JS.</p>
+          <p class="muted">Dibuat dengan HTML, CSS, dan JavaScript yang rapi.</p>
         </div>
       </div>
     </div>
@@ -174,45 +177,45 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="hero__content reveal">
           <div class="badge">
             <i class="fa-solid fa-sparkles"></i>
-            <span>My Portfolio</span>
+            <span>Portofolio Saya</span>
           </div>
 
           <h1 class="hero__title">
-            Hi, I’m <span class="text-gradient">Faiz arsyad syukran</span>
+            Halo, saya <span class="text-gradient">Faiz arsyad syukran</span>
           </h1>
 
           <p class="hero__subtitle">
-            <span class="mono muted">Role:</span>
+            <span class="mono muted">Peran:</span>
             <span class="typing" id="typingText" aria-label="Typing effect text"></span>
             <span class="typing__cursor" aria-hidden="true"></span>
           </p>
 
           <p class="hero__bio">
-            I build modern web applications with a strong focus on performance, clean architecture,
-            and premium user experiences. I enjoy crafting elegant interfaces and scalable backends
-            that feel effortless to use.
+            Saya membangun aplikasi web modern dengan fokus pada performa, arsitektur kode yang rapi,
+            dan pengalaman pengguna yang berkualitas. Saya senang merancang antarmuka yang elegan
+            serta sistem backend yang mudah digunakan dan dikembangkan.
           </p>
 
           <div class="hero__cta">
             <a class="btn btn--primary" href="assets/cv.pdf" download>
               <i class="fa-solid fa-download"></i>
-              Download CV
+              Unduh CV
             </a>
 
             <a class="btn btn--ghost" href="#contact">
               <i class="fa-solid fa-paper-plane"></i>
-              Contact Me
+              Hubungi Saya
             </a>
           </div>
 
           <div class="hero__meta">
             <div class="meta-pill glass">
               <i class="fa-solid fa-location-dot"></i>
-              <span>Remote • Indonesia</span>
+              <span>Jarak jauh • Indonesia</span>
             </div>
             <div class="meta-pill glass">
               <i class="fa-solid fa-bolt"></i>
-              <span>Fast • Clean • Reliable</span>
+              <span>Cepat • Rapi • Andal</span>
             </div>
           </div>
         </div>
@@ -222,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="profile__glow" aria-hidden="true"></div>
     <img
       src="assets/pais.jpeg"
-      alt="Profile placeholder"
+      alt="Foto profil Faiz"
       class="profile__img"
       loading="lazy"
     />
@@ -233,58 +236,58 @@ document.addEventListener("DOMContentLoaded", () => {
       <i class="fa-solid fa-code"></i>
     </div>
     <div class="hero__tags-text">
-      <p class="hero__floating-title">Middle-level mindset</p>
-      <p class="hero__floating-sub muted">informatics engineering</p>
+    <p class="hero__floating-title">AI & Software</p>
+    <p class="hero__floating-sub muted">Code • Create • Innovate</p>
     </div>
   </div>
 </div>
 
     </section>
 
-    <!-- ====== About ====== -->
+    <!-- ====== Tentang ====== -->
     <section class="section" id="about">
       <div class="container">
         <div class="section__head reveal">
-          <p class="section__kicker">About</p>
-          <h2 class="section__title">Crafting premium experiences with clean code</h2>
+          <p class="section__kicker">Tentang</p>
+          <h2 class="section__title">Menciptakan pengalaman berkualitas dengan kode yang rapi</h2>
           <p class="section__desc">
-            I focus on building web products that are fast, accessible, and delightful —
-            with thoughtful UI/UX and scalable architecture.
+            Saya berfokus membangun produk web yang cepat, mudah diakses, dan nyaman digunakan,
+            dengan UI/UX yang matang serta arsitektur yang mudah dikembangkan.
           </p>
         </div>
 
         <div class="about__grid">
           <div class="about__text reveal">
             <div class="card glass">
-              <h3 class="card__title">Experience Summary</h3>
+              <h3 class="card__title">Ringkasan Pengalaman</h3>
               <p class="muted">
-                I specialize in Full Stack development using <b>Html</b>, <b>Python</b>,<b>Css</b>, <b>Laravel</b>, <b>PHP</b>, and modern
-                <b>JavaScript</b>. I care deeply about maintainability, design consistency, and performance.
+                Saya berfokus pada pengembangan Full Stack menggunakan <b>HTML</b>, <b>Python</b>,<b>CSS</b>, <b>Laravel</b>, <b>PHP</b>, and modern
+                <b>JavaScript</b>. Saya mengutamakan kemudahan pemeliharaan, konsistensi desain, dan performa.
               </p>
 
               <div class="about__list">
                 <div class="about__item">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span>Clean architecture & reusable components</span>
+                  <span>Arsitektur kode rapi dan komponen yang dapat digunakan kembali</span>
                 </div>
                 <div class="about__item">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span>Responsive UI with modern micro-interactions</span>
+                  <span>Antarmuka responsif dengan interaksi mikro modern</span>
                 </div>
                 <div class="about__item">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span>Scalable backend with secure best practices</span>
+                  <span>Backend yang mudah dikembangkan dengan praktik keamanan yang baik</span>
                 </div>
               </div>
 
               <div class="about__cta">
                 <a class="btn btn--soft" href="#projects">
                   <i class="fa-solid fa-grid-2"></i>
-                  Explore Projects
+                  Jelajahi Proyek
                 </a>
                 <a class="btn btn--ghost" href="#github">
                   <i class="fa-brands fa-github"></i>
-                  View GitHub
+                  Lihat GitHub
                 </a>
               </div>
             </div>
@@ -296,9 +299,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="highlight__icon">
                   <i class="fa-solid fa-gauge-high"></i>
                 </div>
-                <h3 class="highlight__title">Performance</h3>
+                <h3 class="highlight__title">Performa</h3>
                 <p class="muted">
-                  Optimized UI, clean DOM updates, and efficient patterns for smooth experiences.
+                  UI yang dioptimalkan, pembaruan DOM yang rapi, dan pola efisien untuk pengalaman yang lancar.
                 </p>
               </div>
 
@@ -306,9 +309,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="highlight__icon">
                   <i class="fa-solid fa-code"></i>
                 </div>
-                <h3 class="highlight__title">Clean Code</h3>
+                <h3 class="highlight__title">Kode Rapi</h3>
                 <p class="muted">
-                  Maintainable structure, reusable components, and readable naming conventions.
+                  Struktur yang mudah dirawat, komponen yang dapat digunakan kembali, dan penamaan yang mudah dipahami.
                 </p>
               </div>
 
@@ -318,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <h3 class="highlight__title">UI/UX</h3>
                 <p class="muted">
-                  Elegant layouts, consistent typography, and micro-interactions that feel premium.
+                  Tata letak elegan, tipografi konsisten, dan interaksi mikro yang terasa istimewa.
                 </p>
               </div>
             </div>
@@ -326,15 +329,15 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="stats card glass">
               <div class="stats__item">
                 <p class="stats__num" data-count="20">0</p>
-                <p class="stats__label muted">Projects Completed</p>
+                <p class="stats__label muted">Proyek Diselesaikan</p>
               </div>
               <div class="stats__item">
-                <p class="stats__num" data-count="2">0</p>
-                <p class="stats__label muted">Years Learning</p>
+                <p class="stats__num" data-count="3">0</p>
+                <p class="stats__label muted">Tahun Belajar</p>
               </div>
               <div class="stats__item">
                 <p class="stats__num" data-count="20">0</p>
-                <p class="stats__label muted">GitHub Repos</p>
+                <p class="stats__label muted">Repositori GitHub</p>
               </div>
             </div>
           </div>
@@ -342,14 +345,14 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </section>
 
-    <!-- ====== Skills ====== -->
+    <!-- ====== Keahlian ====== -->
     <section class="section" id="skills">
       <div class="container">
         <div class="section__head reveal">
-          <p class="section__kicker">Skills</p>
-          <h2 class="section__title">Modern stack, production mindset</h2>
+          <p class="section__kicker">Keahlian</p>
+          <h2 class="section__title">Teknologi modern dengan pola pikir siap produksi</h2>
           <p class="section__desc">
-            A curated set of skills focused on building premium web apps with clean architecture and excellent UI.
+            Kumpulan keahlian untuk membangun aplikasi web berkualitas dengan arsitektur rapi dan UI yang baik.
           </p>
         </div>
 
@@ -360,7 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="skills__col reveal">
             <div class="skills__head">
               <h3 class="skills__title">Frontend</h3>
-              <p class="muted">Beautiful UI, responsive layout, smooth interactions.</p>
+              <p class="muted">UI menarik, tata letak responsif, dan interaksi yang mulus.</p>
             </div>
 
             <div class="skill card glass">
@@ -369,10 +372,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-brands fa-html5"></i>
                   <span>HTML</span>
                 </div>
-                <span class="skill__level">50%</span>
+                <span class="skill__level">70%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 50%"></div>
+                <div class="bar__fill" style="width: 70%"></div>
               </div>
             </div>
 
@@ -382,10 +385,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-brands fa-css3-alt"></i>
                   <span>CSS</span>
                 </div>
-                <span class="skill__level">50%</span>
+                <span class="skill__level">70%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 50%"></div>
+                <div class="bar__fill" style="width: 70%"></div>
               </div>
             </div>
 
@@ -407,7 +410,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="skills__col reveal">
             <div class="skills__head">
               <h3 class="skills__title">Backend</h3>
-              <p class="muted">Reliable APIs, secure logic, scalable systems.</p>
+              <p class="muted">API andal, logika aman, dan sistem yang mudah dikembangkan.</p>
             </div>
 
             <div class="skill card glass">
@@ -416,10 +419,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-brands fa-php"></i>
                   <span>PHP</span>
                 </div>
-                <span class="skill__level">50%</span>
+                <span class="skill__level">75%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 50%"></div>
+                <div class="bar__fill" style="width: 75%"></div>
               </div>
             </div>
 
@@ -429,10 +432,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-solid fa-layer-group"></i>
                   <span>Laravel</span>
                 </div>
-                <span class="skill__level">40%</span>
+                <span class="skill__level">75%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 40%"></div>
+                <div class="bar__fill" style="width: 75%"></div>
               </div>
             </div>
 
@@ -442,10 +445,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-solid fa-database"></i>
                   <span>MySQL</span>
                 </div>
-                <span class="skill__level">60%</span>
+                <span class="skill__level">74%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 60%"></div>
+                <div class="bar__fill" style="width: 74%"></div>
               </div>
             </div>
           </div>
@@ -454,7 +457,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="skills__col reveal">
             <div class="skills__head">
               <h3 class="skills__title">Tools</h3>
-              <p class="muted">Efficient workflow & professional collaboration.</p>
+              <p class="muted">Alur kerja efisien dan kolaborasi profesional.</p>
             </div>
 
             <div class="skill card glass">
@@ -463,74 +466,77 @@ document.addEventListener("DOMContentLoaded", () => {
                   <i class="fa-brands fa-git-alt"></i>
                   <span>Git & GitHub</span>
                 </div>
-                <span class="skill__level">70%</span>
+                <span class="skill__level">85%</span>
               </div>
               <div class="bar">
-                <div class="bar__fill" style="width: 70%"></div>
+                <div class="bar__fill" style="width: 85%"></div>
               </div>
             </div>
+            
+          <div class="skill card glass">
+            <div class="skill__top">
+              <div class="skill__name">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>Laragon</span>
+              </div>
+              <span class="skill__level">90%</span>
+            </div>
+            <div class="bar">
+              <div class="bar__fill" style="width: 90%"></div>
+            </div>
+          </div>
 
-            <div class="skill card glass">
-              <div class="skill__top">
-                <div class="skill__name">
-                  <i class="fa-solid fa-server"></i>
-                  <span>XAMPP</span>
-                </div>
-                <span class="skill__level">70%</span>
+          <div class="skill card glass">
+            <div class="skill__top">
+              <div class="skill__name">
+                <i class="fa-brands fa-docker"></i>
+                <span>Docker</span>
               </div>
-              <div class="bar">
-                <div class="bar__fill" style="width: 70%"></div>
-              </div>
+              <span class="skill__level">65%</span>
             </div>
+            <div class="bar">
+              <div class="bar__fill" style="width: 65%"></div>
+            </div>
+          </div>
 
-            <div class="skill card glass">
-              <div class="skill__top">
-                <div class="skill__name">
-                  <i class="fa-solid fa-screwdriver-wrench"></i>
-                  <span>Debugging</span>
-                </div>
-                <span class="skill__level">90%</span>
-              </div>
-              <div class="bar">
-                <div class="bar__fill" style="width: 90%"></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====== Projects ====== -->
+    <!-- ====== Proyek ====== -->
     <section class="section" id="projects">
       <div class="container">
         <div class="section__head reveal">
-          <p class="section__kicker">Projects</p>
-          <h2 class="section__title">Selected work with premium quality</h2>
-          <p class="section__desc">
-            A set of projects that demonstrate UI polish, clean structure, and scalable implementation.
-          </p>
+          <p class="section__kicker">Proyek</p>
+        <h2 class="section__title">Solusi Digital dari Ide Menjadi Karya</h2>
+        <p class="section__desc">
+          Eksplorasi proyek pengembangan web, kecerdasan buatan, backend,
+          dan IoT yang menggabungkan fungsionalitas, desain modern,
+          serta pemecahan masalah melalui teknologi.
+        </p>
         </div>
 
         <div class="projects__controls reveal">
           <div class="filters glass">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="webapp">Web App</button>
-            <button class="filter-btn" data-filter="ui">UI</button>
-            <button class="filter-btn" data-filter="backend">Backend</button>
-          </div>
-
+              <button class="filter-btn active" data-filter="all">Semua</button>
+              <button class="filter-btn" data-filter="webapp">Aplikasi Web</button>
+              <button class="filter-btn" data-filter="AI">AI</button>
+              <button class="filter-btn" data-filter="iot">IoT & Robotika</button>
+            </div>
           <div class="projects__hint muted">
             <i class="fa-solid fa-circle-info"></i>
-            Click <b>View Details</b> for a premium modal.
+            Klik <b>Lihat Detail</b> untuk melihat informasi proyek.
           </div>
         </div>
 
         <div class="projects__grid" id="projectsGrid">
           <!-- Project Cards (8) -->
+
            <!-- projek 1 -->
           <article class="project card glass reveal" data-category="webapp"
-            data-title="Mini Game with Python"
-            data-description="each plane level is different and the ammo is also different, the higher the level the more difficult the game"
+            data-title="Mini Gim dengan Python"
+            data-description="Setiap level pesawat memiliki tantangan dan amunisi berbeda. Semakin tinggi level, semakin sulit permainannya."
             data-features="python programming,Pygame library,Interactive gameplay,Score tracking"
             data-tech="Python,Pygame"
             data-live="#"
@@ -542,12 +548,12 @@ document.addEventListener("DOMContentLoaded", () => {
               <img src="projek1/image2.png" class="slide"/>
               <img src="projek1/image3.png" class="slide"/>
               <img src="projek1/image4.png" class="slide"/>
-              <span class="project__tag">Web App</span>
+              <span class="project__tag">Aplikasi Web</span>
             </div>
             <div class="project__body">
               <h3 class="project__title">Galaxy Defender</h3>
               <p class="project__desc muted">
-                A mini game built with Python and Pygame.
+                Mini gim yang dibuat menggunakan Python dan Pygame.
               </p>
 
               <div class="badges">
@@ -559,7 +565,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="project__actions">
                 <a class="btn btn--soft" href="#" target="_blank" rel="noopener">
                   <i class="fa-solid fa-globe"></i>
-                  Live Demo
+                  Demo Langsung
                 </a>
                 <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">
                   <i class="fa-brands fa-github"></i>
@@ -567,7 +573,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </a>
                 <button class="btn btn--primary project__details">
                   <i class="fa-solid fa-magnifying-glass"></i>
-                  View Details
+                  Lihat Detail
                 </button>
               </div>
             </div>
@@ -576,9 +582,9 @@ document.addEventListener("DOMContentLoaded", () => {
           
               <!-- projek 2 -->
           <article class="project card glass reveal" data-category="webapp"
-            data-title="E-commerce Website"
-            data-description="A simple e-commerce website built with HTML, CSS, and JavaScript"
-            data-features="HTML,CSS,JavaScript,Responsive Design"
+            data-title="Situs E-commerce"
+            data-description="Situs e-commerce sederhana yang dibuat dengan HTML, CSS, dan JavaScript."
+            data-features="HTML,CSS,JavaScript,Desain Responsif"
             data-tech="HTML,CSS,JavaScript"
             data-live="#"
             data-github="#"
@@ -589,24 +595,24 @@ document.addEventListener("DOMContentLoaded", () => {
               <img src="projek2/image2.png" class="slide"/>
               <img src="projek2/image3.png" class="slide"/>
               <img src="projek2/image4.png" class="slide"/>
-              <span class="project__tag">Web App</span>
+              <span class="project__tag">Aplikasi Web</span>
             </div>
             <div class="project__body">
               <h3 class="project__title">E-commerce</h3>
               <p class="project__desc muted">
-                A simple e-commerce website built with HTML, CSS, and JavaScript.
+                Situs e-commerce sederhana yang dibuat dengan HTML, CSS, dan JavaScript.
               </p>
 
               <div class="badges">
-                <span class="badge-pill">Html</span>
-                <span class="badge-pill">Css</span>
+                <span class="badge-pill">HTML</span>
+                <span class="badge-pill">CSS</span>
                 <span class="badge-pill">JavaScript</span>
               </div>
 
               <div class="project__actions">
                 <a class="btn btn--soft" href="#" target="_blank" rel="noopener">
                   <i class="fa-solid fa-globe"></i>
-                  Live Demo
+                  Demo Langsung
                 </a>
                 <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">
                   <i class="fa-brands fa-github"></i>
@@ -614,59 +620,270 @@ document.addEventListener("DOMContentLoaded", () => {
                 </a>
                 <button class="btn btn--primary project__details">
                   <i class="fa-solid fa-magnifying-glass"></i>
-                  View Details
+                  Lihat Detail
                 </button>
               </div>
             </div>
           </article>
               <!-- projek 2 end -->
 
-               <!-- projek 3 -->
-          <article class="project card glass reveal" data-category="webapp"
-            data-title="E-commerce Website"
-            data-description="A simple e-commerce website built with HTML, CSS, and JavaScript"
-            data-features="HTML,CSS,JavaScript,Responsive Design"
-            data-tech="HTML,CSS,JavaScript"
-            data-live="#"
-            data-github="#"
-          >
-            <div class="slider">
-              <img src="projek3/image1.png" class="slide active"/>
-              <img src="projek3/image2.png" class="slide"/>
-              <img src="projek3/image3.png" class="slide"/>
-              <img src="projek3/image4.png" class="slide"/>
-              <span class="project__tag">Web App</span>
-            </div>
-            <div class="project__body">
-              <h3 class="project__title">E-commerce UMKM</h3>
-              <p class="project__desc muted">
-                A simple e-commerce website built with HTML, CSS, and JavaScript.
-              </p>
+             
+<!-- projek 3: TaxBot UG -->
+<article class="project card glass reveal" data-category="AI backend webapp"
+  data-title="TaxBot UG — AI Tax Assistant"
+  data-description="TaxBot UG merupakan proyek kedua dari Tax Center Universitas Gunadarma. Website ini dikembangkan untuk mendukung kebutuhan informasi perpajakan melalui integrasi Large Language Model (LLM). Aplikasi menggunakan Laravel 12 dan MySQL serta masih dalam tahap pengembangan."
+  data-features="Asisten informasi perpajakan berbasis LLM,Integrasi Large Language Model (LLM),Pengembangan aplikasi web menggunakan Laravel 12,Pengelolaan basis data dengan MySQL,Pengembangan fitur secara bertahap"
+  data-tech="PHP,Laravel 12,MySQL,LLM,HTML,CSS,JavaScript"
+  data-live="#"
+  data-github="#"
+>
+  <div class="slider">
+    <img src="projek3/image1.png"
+      class="slide active"
+      alt="Antarmuka TaxBot UG"
+      loading="lazy"/>
+    <img src="projek3/image2.png"
+      class="slide"
+      alt="Fitur website TaxBot UG"
+      loading="lazy"/>
+    <img src="projek3/image3.png"
+      class="slide"
+      alt="Tampilan platform TaxBot UG"
+      loading="lazy"/>
 
-              <div class="badges">
-                <span class="badge-pill">Html</span>
-                <span class="badge-pill">Css</span>
-                <span class="badge-pill">JavaScript</span>
-              </div>
+    <span class="project__tag">AI & Tax Technology</span>
+  </div>
 
-              <div class="project__actions">
-                <a class="btn btn--soft" href="https://bangiz.netlify.app/" target="_blank" rel="noopener">
-                  <i class="fa-solid fa-globe"></i>
-                  Live Demo
-                </a>
-                <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">
-                  <i class="fa-brands fa-github"></i>
-                  GitHub
-                </a>
-                <button class="btn btn--primary project__details">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                  View Details
-                </button>
-              </div>
-            </div>
-          </article>
-              <!-- projek 3 end -->
-         
+  <div class="project__body">
+    <h3 class="project__title">TaxBot UG — AI Tax Assistant</h3>
+
+    <p class="project__desc muted">
+      Website asisten perpajakan berbasis LLM untuk mendukung
+      kebutuhan informasi perpajakan di Tax Center Universitas
+      Gunadarma. Dikembangkan dengan Laravel 12 dan MySQL,
+      proyek ini masih dalam tahap pengembangan.
+    </p>
+
+    <div class="badges">
+      <span class="badge-pill">Laravel 12</span>
+      <span class="badge-pill">PHP</span>
+      <span class="badge-pill">MySQL</span>
+      <span class="badge-pill">LLM</span>
+      <span class="badge-pill">AI Integration</span>
+    </div>
+
+    <div class="project__actions">
+      <a class="btn btn--soft" href="#"
+        target="_blank" rel="noopener">
+        <i class="fa-solid fa-code"></i>
+        Dalam Pengembangan
+      </a>
+
+      <a class="btn btn--ghost" href="#"
+        target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i>
+        GitHub
+      </a>
+
+      <button class="btn btn--primary project__details" type="button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Lihat Detail
+      </button>
+    </div>
+  </div>
+</article>
+<!-- projek 3 end -->
+
+
+
+<!-- Projek 4: Travel AI Recommendation -->
+<article class="project card glass reveal" data-category="ai"
+  data-title="Travel AI Recommendation"
+  data-description="Website rekomendasi liburan berbasis Large Language Model (LLM). Pengguna cukup memasukkan destinasi atau preferensi perjalanan yang diinginkan, kemudian AI akan menghasilkan rekomendasi liburan yang relevan berdasarkan input pengguna. Website dikembangkan menggunakan HTML, CSS, JavaScript, dan AI API."
+  data-features="Rekomendasi destinasi berbasis AI,Input preferensi perjalanan,Pemrosesan prompt menggunakan LLM,Integrasi AI API,Antarmuka responsif,Rekomendasi liburan sesuai input pengguna"
+  data-tech="HTML,CSS,JavaScript,LLM,AI API"
+  data-live="#"
+  data-github="#"
+>
+  <div class="slider">
+    <img src="projek4/image1.png" class="slide active" alt="Halaman utama Travel AI Recommendation" loading="lazy"/>
+    <img src="projek4/image2.png" class="slide" alt="Form input preferensi perjalanan" loading="lazy"/>
+    <img src="projek4/image3.png" class="slide" alt="Hasil rekomendasi liburan dari AI" loading="lazy"/>
+    <img src="projek4/image5.png" class="slide" alt="Dokumentasi antarmuka Travel AI" loading="lazy"/>
+
+    <span class="project__tag">AI & Web App</span>
+  </div>
+
+  <div class="project__body">
+    <h3 class="project__title">Travel AI Recommendation</h3>
+
+    <p class="project__desc muted">
+      Website rekomendasi liburan berbasis LLM yang membantu pengguna
+      menemukan ide perjalanan berdasarkan destinasi dan preferensi
+      yang mereka masukkan melalui integrasi AI API.
+    </p>
+
+    <div class="badges">
+      <span class="badge-pill">HTML</span>
+      <span class="badge-pill">CSS</span>
+      <span class="badge-pill">JavaScript</span>
+      <span class="badge-pill">LLM</span>
+      <span class="badge-pill">AI API</span>
+    </div>
+
+    <div class="project__actions">
+      <a class="btn btn--soft" href="https://travelengine-fvpkfytbi-faizarsyadd.vercel.app/" target="_blank" rel="noopener">
+        <i class="fa-solid fa-globe"></i>
+        Demo Langsung
+      </a>
+
+      <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i>
+        GitHub
+      </a>
+
+      <button class="btn btn--primary project__details" type="button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Lihat Detail
+      </button>
+    </div>
+  </div>
+</article>
+<!-- Projek 4 End -->
+
+
+<!-- Projek 5: VCare Women's Health -->
+<article class="project card glass reveal" data-category="webapp"
+  data-title="VCare — Women's Health Recommendation"
+  data-description="Platform rekomendasi kesehatan wanita yang dikembangkan sebagai proyek Tax Center Universitas Gunadarma. Website dibangun menggunakan PHP, MySQL, dan Laravel 12 untuk menyediakan informasi serta rekomendasi kesehatan yang disesuaikan dengan kategori pengguna, mulai dari remaja, ibu hamil, ibu menyusui, wanita menopause, hingga wanita yang tidak hamil dan tidak menyusui."
+  data-features="Rekomendasi kesehatan wanita berdasarkan kategori pengguna,Informasi kesehatan untuk remaja,Pendampingan informasi kesehatan ibu hamil,Informasi kesehatan ibu menyusui,Edukasi kesehatan menopause,Informasi kesehatan wanita yang tidak hamil dan tidak menyusui,Integrasi database MySQL,Website berbasis Laravel 12"
+  data-tech="PHP,MySQL,Laravel 12,HTML,CSS,JavaScript"
+  data-live="#"
+  data-github="#"
+>
+  <div class="slider">
+    <img src="projek5/image1.png" class="slide active" alt="Halaman utama VCare" loading="lazy"/>
+    <img src="projek5/image2.png" class="slide" alt="Fitur rekomendasi kesehatan wanita" loading="lazy"/>
+    <img src="projek5/image3.png" class="slide" alt="Antarmuka informasi kesehatan VCare" loading="lazy"/>
+
+    <span class="project__tag">Health Tech</span>
+  </div>
+
+  <div class="project__body">
+    <h3 class="project__title">VCare — Women's Health</h3>
+
+    <p class="project__desc muted">
+      Platform rekomendasi dan edukasi kesehatan wanita yang dikembangkan
+      sebagai proyek Tax Center Universitas Gunadarma. Dibangun dengan
+      Laravel 12, PHP, dan MySQL untuk menyediakan informasi sesuai
+      tahap kehidupan dan kategori pengguna.
+    </p>
+
+    <div class="badges">
+      <span class="badge-pill">Laravel 12</span>
+      <span class="badge-pill">PHP</span>
+      <span class="badge-pill">MySQL</span>
+      <span class="badge-pill">Health Tech</span>
+    </div>
+
+    <div class="project__actions">
+      <a class="btn btn--soft" href="https://vcare.pro/" target="_blank" rel="noopener">
+        <i class="fa-solid fa-globe"></i>
+        Demo Langsung
+      </a>
+
+      <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i>
+        GitHub
+      </a>
+
+      <button class="btn btn--primary project__details" type="button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Lihat Detail
+      </button>
+    </div>
+  </div>
+</article>
+<!-- Projek 5 End -->
+
+<!-- Projek 6: Mini Robot Control ESP32 -->
+<article class="project card glass reveal" data-category="iot"
+  data-title="Mini Robot Control ESP32"
+  data-description="Proyek mini robot berbasis ESP32 yang menggunakan 4 motor servo untuk menggerakkan bagian robot dan sensor ultrasonik HC-SR04 untuk mendeteksi jarak objek. Dokumentasi mencakup perakitan, wiring komponen, konfigurasi pin, dan pengujian sistem."
+  data-features="ESP32 sebagai mikrokontroler,4 motor servo,Sensor ultrasonik HC-SR04,Panduan wiring dan koneksi pin,Perakitan perangkat keras,Pemrograman dan pengujian robot"
+  data-tech="ESP32,Arduino IDE,C++,Servo Motor,HC-SR04,IoT"
+  data-live="#"
+  data-github="#"
+>
+  <div class="slider">
+    <img src="projek6/image1.jpeg"
+      class="slide active"
+      alt="Mini robot berbasis ESP32 dengan empat servo dan sensor ultrasonik"
+      loading="lazy"/>
+
+    <img src="projek6/image2.jpeg"
+      class="slide"
+      alt="Proses perakitan komponen mini robot"
+      loading="lazy"/>
+
+    <img src="projek6/image3.jpeg"
+      class="slide"
+      alt="Dokumentasi wiring ESP32, servo, dan sensor ultrasonik"
+      loading="lazy"/>
+
+    <img src="projek6/image4.jpeg"
+      class="slide"
+      alt="Pengujian pergerakan dan sensor jarak mini robot"
+      loading="lazy"/>
+
+    <span class="project__tag">Robotika & IoT</span>
+  </div>
+
+  <div class="project__body">
+    <h3 class="project__title">Mini Robot Control</h3>
+
+    <p class="project__desc muted">
+      Mini robot berbasis ESP32 dengan 4 motor servo dan sensor
+      ultrasonik HC-SR04. Proyek ini mencakup perakitan hardware,
+      wiring komponen, pemrograman, dan pengujian pergerakan robot
+      serta deteksi jarak objek.
+    </p>
+
+    <div class="badges">
+      <span class="badge-pill">ESP32</span>
+      <span class="badge-pill">4 Servo</span>
+      <span class="badge-pill">HC-SR04</span>
+      <span class="badge-pill">Arduino IDE</span>
+      <span class="badge-pill">Robotika</span>
+    </div>
+
+    <div class="project__actions">
+      <a class="btn btn--soft"
+        href="#"
+        target="_blank"
+        rel="noopener">
+        <i class="fa-solid fa-book-open"></i>
+        Dokumentasi
+      </a>
+
+      <a class="btn btn--ghost"
+        href="#"
+        target="_blank"
+        rel="noopener">
+        <i class="fa-brands fa-github"></i>
+        GitHub
+      </a>
+
+      <button class="btn btn--primary project__details"
+        type="button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Lihat Detail
+      </button>
+    </div>
+  </div>
+</article>
+<!-- Projek 6 End -->
+
         </div>
       </div>
     </section>
@@ -677,32 +894,32 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="modal__panel glass" role="document">
         <div class="modal__top">
           <div>
-            <p class="modal__kicker muted">Project Details</p>
-            <h3 class="modal__title" id="modalTitle">Project Title</h3>
+            <p class="modal__kicker muted">Detail Proyek</p>
+            <h3 class="modal__title" id="modalTitle">Judul Proyek</h3>
           </div>
-          <button class="icon-btn" id="modalClose" aria-label="Close modal">
+          <button class="icon-btn" id="modalClose" aria-label="Tutup jendela detail">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
 
         <p class="modal__desc muted" id="modalDesc">
-          Project description goes here.
+          Deskripsi proyek akan ditampilkan di sini.
         </p>
 
         <div class="modal__section">
-          <h4 class="modal__subtitle">Key Features</h4>
+          <h4 class="modal__subtitle">Fitur Utama</h4>
           <ul class="modal__list" id="modalFeatures"></ul>
         </div>
 
         <div class="modal__section">
-          <h4 class="modal__subtitle">Tech Stack</h4>
+          <h4 class="modal__subtitle">Teknologi yang Digunakan</h4>
           <div class="badges" id="modalTech"></div>
         </div>
 
         <div class="modal__actions">
           <a class="btn btn--soft" id="modalLive" href="#" target="_blank" rel="noopener">
             <i class="fa-solid fa-globe"></i>
-            Live Demo
+            Demo Langsung
           </a>
           <a class="btn btn--ghost" id="modalGitHub" href="#" target="_blank" rel="noopener">
             <i class="fa-brands fa-github"></i>
@@ -717,9 +934,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="container">
         <div class="section__head reveal">
           <p class="section__kicker">GitHub</p>
-          <h2 class="section__title">Open-source & public repositories</h2>
+          <h2 class="section__title">Repositori publik dan sumber terbuka</h2>
           <p class="section__desc">
-            Live fetched from GitHub API with loading skeleton and graceful error handling.
+            Data diambil langsung dari API GitHub, dilengkapi indikator pemuatan dan penanganan kesalahan.
           </p>
         </div>
 
@@ -729,238 +946,323 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <div class="github__error" id="githubError" hidden>
           <div class="card glass">
-            <h3 class="card__title">Couldn’t load GitHub repos</h3>
+            <h3 class="card__title">Repositori GitHub tidak dapat dimuat</h3>
             <p class="muted">
-              Please check your username or try again later.
+              Periksa nama pengguna GitHub kamu atau coba lagi nanti.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====== Timeline ====== -->
-    <section class="section" id="timeline">
-      <div class="container">
-        <div class="section__head reveal">
-          <p class="section__kicker">Timeline</p>
-          <h2 class="section__title">Growth & experience journey</h2>
-          <p class="section__desc">
-            A simple timeline showing progression and consistent improvement.
+   <!-- ====== Perjalanan Karier ====== -->
+<section class="section" id="timeline">
+  <div class="container">
+
+    <div class="section__head reveal">
+      <p class="section__kicker">Perjalanan Karier</p>
+      <h2 class="section__title">
+        Dari Belajar hingga Berkontribusi
+      </h2>
+      <p class="section__desc">
+        Perjalanan saya dalam mempelajari teknologi, mengembangkan
+        keterampilan, membangun solusi digital, dan mendapatkan
+        pengalaman profesional di bidang pengembangan perangkat lunak.
+      </p>
+    </div>
+
+    <div class="timeline reveal">
+
+      <!-- 2023 -->
+      <div class="timeline__item glass">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <p class="timeline__year">2023</p>
+          <h3 class="timeline__title">
+            Memulai Perjalanan Pengembangan Web
+          </h3>
+          <p class="muted">
+            Mulai mempelajari pengembangan web dari dasar, termasuk
+            HTML, CSS, dan JavaScript. Berfokus pada pemahaman struktur
+            halaman web, desain antarmuka, serta cara membangun website
+            yang menarik dan responsif.
           </p>
         </div>
-
-        <div class="timeline reveal">
-          <div class="timeline__item glass">
-            <div class="timeline__dot"></div>
-            <div class="timeline__content">
-              <p class="timeline__year">2023</p>
-              <h3 class="timeline__title">Started learning Web Development</h3>
-              <p class="muted">
-                Focused on fundamentals: HTML, CSS, JavaScript, responsive layouts, and clean structure.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline__item glass">
-            <div class="timeline__dot"></div>
-            <div class="timeline__content">
-              <p class="timeline__year">2024</p>
-              <h3 class="timeline__title">Built Laravel projects</h3>
-              <p class="muted">
-                Developed CRUD systems, authentication, dashboards, and database-driven applications.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline__item glass">
-            <div class="timeline__dot"></div>
-            <div class="timeline__content">
-              <p class="timeline__year">2025</p>
-              <h3 class="timeline__title">Enter the workforce</h3>
-              <p class="muted">
-                I worked on several website and application projects for someone who used my services
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
 
-    <!-- ====== Testimonials ====== -->
-    <section class="section" id="testimonials">
-      <div class="container">
-        <div class="section__head reveal">
-          <p class="section__kicker">Testimonials</p>
-          <h2 class="section__title">What people say</h2>
-          <p class="section__desc">
-            A minimal, premium slider showcasing feedback.
+      <!-- 2024: Workshop -->
+      <div class="timeline__item glass">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <p class="timeline__year">2024</p>
+          <h3 class="timeline__title">
+            Mengikuti Workshop dan Memperdalam Teknologi
+          </h3>
+          <p class="muted">
+            Mengikuti berbagai workshop untuk memperluas wawasan
+            teknologi dan meningkatkan keterampilan pemrograman.
+            Mulai mendalami pengembangan aplikasi, pengelolaan basis
+            data, penggunaan framework, serta praktik pengembangan
+            perangkat lunak.
           </p>
         </div>
+      </div>
 
-        <div class="testimonials reveal">
-          <div class="testimonials__track" id="testimonialTrack">
-            <article class="testimonial card glass">
-              <div class="testimonial__top">
-                <div class="avatar">
-                  <span>AR</span>
-                </div>
-                <div>
-                  <p class="testimonial__name">Alex R.</p>
-                  <p class="muted small">Product Manager</p>
-                </div>
-              </div>
-              <p class="testimonial__text">
-                “Super clean UI and professional engineering. Everything felt premium and fast.”
-              </p>
-              <div class="stars" aria-label="5 stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </article>
-
-            <article class="testimonial card glass">
-              <div class="testimonial__top">
-                <div class="avatar">
-                  <span>AR</span>
-                </div>
-                <div>
-                  <p class="testimonial__name">Izal.</p>
-                  <p class="muted small">Product Manager</p>
-                </div>
-              </div>
-              <p class="testimonial__text">
-                “Super clean UI and professional engineering. Everything felt premium and fast.”
-              </p>
-              <div class="stars" aria-label="5 stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </article>
-
-            <article class="testimonial card glass">
-              <div class="testimonial__top">
-                <div class="avatar">
-                  <span>AR</span>
-                </div>
-                <div>
-                  <p class="testimonial__name">Adel</p>
-                  <p class="muted small">Product Manager</p>
-                </div>
-              </div>
-              <p class="testimonial__text">
-                “Super clean UI and professional engineering. Everything felt premium and fast.”
-              </p>
-              <div class="stars" aria-label="5 stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </article>
-
-            <article class="testimonial card glass">
-              <div class="testimonial__top">
-                <div class="avatar">
-                  <span>AR</span>
-                </div>
-                <div>
-                  <p class="testimonial__name">Petruck.</p>
-                  <p class="muted small">Product Manager</p>
-                </div>
-              </div>
-              <p class="testimonial__text">
-                “Super clean UI and professional engineering. Everything felt premium and fast.”
-              </p>
-              <div class="stars" aria-label="5 stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </article>
-
-            <article class="testimonial card glass">
-              <div class="testimonial__top">
-                <div class="avatar">
-                  <span>SM</span>
-                </div>
-                <div>
-                  <p class="testimonial__name">Sarah M.</p>
-                  <p class="muted small">Startup Founder</p>
-                </div>
-              </div>
-              <p class="testimonial__text">
-                “The attention to detail is amazing. Smooth animations and a beautiful design system.”
-              </p>
-              <div class="stars" aria-label="5 stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </article>
-
-            <article class="testimonial card glass">
-              <div class="testimonial__top">
-                <div class="avatar">
-                  <span>DT</span>
-                </div>
-                <div>
-                  <p class="testimonial__name">Daniel T.</p>
-                  <p class="muted small">Senior Engineer</p>
-                </div>
-              </div>
-              <p class="testimonial__text">
-                “Clean code, great UX, and strong performance mindset. Highly recommended.”
-              </p>
-              <div class="stars" aria-label="5 stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </article>
-          </div>
-
-          <div class="testimonials__controls">
-            <button class="icon-btn" id="testPrev" aria-label="Previous testimonial">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button class="icon-btn" id="testNext" aria-label="Next testimonial">
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-          </div>
+      <!-- 2024 - Sekarang: Freelance -->
+      <div class="timeline__item glass">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <p class="timeline__year">2024 — Sekarang</p>
+          <h3 class="timeline__title">
+            Freelance Web Developer
+          </h3>
+          <p class="muted">
+            Mulai membuka layanan pembuatan website dan membantu
+            mahasiswa mengembangkan proyek website sesuai kebutuhan
+            mereka. Pengalaman ini melatih kemampuan menerjemahkan
+            kebutuhan menjadi aplikasi, menyelesaikan masalah teknis,
+            mengelola pengerjaan proyek, dan mengembangkan solusi
+            digital secara mandiri.
+          </p>
         </div>
       </div>
-    </section>
 
-    <!-- ====== Contact ====== -->
+      <!-- Januari 2026 - Sekarang -->
+      <div class="timeline__item glass">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <p class="timeline__year">Januari 2026 — Sekarang</p>
+          <h3 class="timeline__title">
+            Programmer — Tax Center Universitas Gunadarma
+          </h3>
+          <p class="muted">
+            Berkontribusi dalam pengembangan dan pemeliharaan aplikasi
+            web di Tax Center Universitas Gunadarma. Terlibat dalam
+            pengembangan platform menggunakan PHP, Laravel 12, dan
+            MySQL, termasuk proyek VCare yang berfokus pada informasi
+            dan rekomendasi kesehatan wanita berdasarkan kategori
+            serta tahap kehidupan pengguna.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== Testimoni ====== -->
+<section class="section" id="testimonials">
+  <div class="container">
+
+    <div class="section__head reveal">
+      <p class="section__kicker">Testimoni</p>
+      <h2 class="section__title">Cerita di Balik Kolaborasi</h2>
+      <p class="section__desc">
+        Setiap proyek adalah kesempatan untuk belajar, berkolaborasi,
+        dan menciptakan solusi digital yang bermanfaat.
+      </p>
+    </div>
+
+    <div class="testimonials reveal">
+
+      <div class="testimonials__track" id="testimonialTrack">
+
+        <!-- Testimoni 1 -->
+        <article class="testimonial card glass">
+          <div class="testimonial__top">
+            <div class="avatar">
+              <span>01</span>
+            </div>
+            <div>
+              <p class="testimonial__name">Kolaborator Proyek Web</p>
+              <p class="muted small">Pengembangan Website</p>
+            </div>
+          </div>
+
+          <p class="testimonial__text">
+            “Faiz cukup teliti dalam mengembangkan tampilan website.
+            Struktur halaman terasa lebih teratur dan fitur yang
+            dibutuhkan dapat disusun dengan jelas.”
+          </p>
+
+          <div class="badges">
+            <span class="badge-pill">Web Development</span>
+            <span class="badge-pill">UI/UX</span>
+          </div>
+        </article>
+
+        <!-- Testimoni 2 -->
+        <article class="testimonial card glass">
+          <div class="testimonial__top">
+            <div class="avatar">
+              <span>02</span>
+            </div>
+            <div>
+              <p class="testimonial__name">Rekan Proyek AI</p>
+              <p class="muted small">Travel AI Recommendation</p>
+            </div>
+          </div>
+
+          <p class="testimonial__text">
+            “Ide rekomendasi perjalanan berbasis AI menarik karena
+            pengguna bisa mendapatkan inspirasi liburan sesuai
+            preferensi mereka. Integrasi teknologi menjadi bagian
+            yang menarik dari proyek ini.”
+          </p>
+
+          <div class="badges">
+            <span class="badge-pill">Artificial Intelligence</span>
+            <span class="badge-pill">LLM API</span>
+          </div>
+        </article>
+
+        <!-- Testimoni 3 -->
+        <article class="testimonial card glass">
+          <div class="testimonial__top">
+            <div class="avatar">
+              <span>03</span>
+            </div>
+            <div>
+              <p class="testimonial__name">Rekan Proyek VCare</p>
+              <p class="muted small">Platform Kesehatan</p>
+            </div>
+          </div>
+
+          <p class="testimonial__text">
+            “VCare mengangkat kebutuhan informasi kesehatan wanita
+            melalui platform digital. Pengelompokan informasi
+            berdasarkan tahap kehidupan membantu membuat konten
+            lebih terarah bagi penggunanya.”
+          </p>
+
+          <div class="badges">
+            <span class="badge-pill">Laravel 12</span>
+            <span class="badge-pill">PHP & MySQL</span>
+          </div>
+        </article>
+
+        <!-- Testimoni 4 -->
+        <article class="testimonial card glass">
+          <div class="testimonial__top">
+            <div class="avatar">
+              <span>04</span>
+            </div>
+            <div>
+              <p class="testimonial__name">Rekan Eksperimen</p>
+              <p class="muted small">Robotika & IoT</p>
+            </div>
+          </div>
+
+          <p class="testimonial__text">
+            “Proyek mini robot memberikan pengalaman langsung dalam
+            menghubungkan perangkat keras dan pemrograman.
+            Pengujian sensor serta servo juga menjadi bagian penting
+            dalam memahami cara kerja sistem.”
+          </p>
+
+          <div class="badges">
+            <span class="badge-pill">ESP32</span>
+            <span class="badge-pill">Robotika</span>
+          </div>
+        </article>
+                <!-- testimoni 4 end -->
+
+        <!-- Testimoni 5 -->
+        <article class="testimonial card glass">
+          <div class="testimonial__top">
+            <div class="avatar">
+              <span>05</span>
+            </div>
+            <div>
+              <p class="testimonial__name">Rekan Belajar</p>
+              <p class="muted small">Kolaborasi & Pengembangan</p>
+            </div>
+          </div>
+
+          <p class="testimonial__text">
+            “Proses mengembangkan proyek menjadi kesempatan untuk
+            mencoba pendekatan baru, memperbaiki kesalahan, dan
+            memahami bagaimana sebuah aplikasi dibangun secara
+            bertahap.”
+          </p>
+
+          <div class="badges">
+            <span class="badge-pill">Problem Solving</span>
+            <span class="badge-pill">Pengembangan</span>
+          </div>
+        </article>
+        <!-- testimoni 5 end -->
+
+        <!-- Testimoni 6 -->
+        <article class="testimonial card glass">
+          <div class="testimonial__top">
+            <div class="avatar">
+              <span>06</span>
+            </div>
+            <div>
+              <p class="testimonial__name">Mitra Proyek</p>
+              <p class="muted small">Solusi Digital</p>
+            </div>
+          </div>
+
+          <p class="testimonial__text">
+            “Mengembangkan solusi digital membutuhkan perhatian
+            terhadap kebutuhan pengguna, fungsi, dan tampilan.
+            Pendekatan tersebut menjadi bekal penting untuk
+            mengembangkan proyek yang lebih baik ke depannya.”
+          </p>
+
+          <div class="badges">
+            <span class="badge-pill">Pengembangan Web</span>
+            <span class="badge-pill">Solusi Digital</span>
+          </div>
+        </article>
+        
+        <!-- testimoni 6 end -->
+
+      </div>
+
+      <div class="testimonials__controls">
+        <button
+          class="icon-btn"
+          id="testPrev"
+          type="button"
+          aria-label="Testimoni sebelumnya"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button
+          class="icon-btn"
+          id="testNext"
+          type="button"
+          aria-label="Testimoni berikutnya"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ====== Kontak ====== -->
     <section class="section" id="contact">
       <div class="container">
         <div class="section__head reveal">
-          <p class="section__kicker">Contact</p>
-          <h2 class="section__title">Let’s build something premium</h2>
+          <p class="section__kicker">Kontak</p>
+          <h2 class="section__title">Mari bangun sesuatu yang luar biasa</h2>
           <p class="section__desc">
-            Send a message and I’ll reply as soon as possible.
+            Kirim pesan dan saya akan membalasnya sesegera mungkin.
           </p>
         </div>
 
         <div class="contact__grid">
           <div class="contact__info reveal">
             <div class="card glass">
-              <h3 class="card__title">Contact Info</h3>
+              <h3 class="card__title">Informasi Kontak</h3>
               <p class="muted">
-                You can also reach me via social links below.
+                Kamu juga dapat menghubungi saya melalui tautan media sosial berikut.
               </p>
 
               <div class="contact__items">
@@ -997,33 +1299,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <div class="contact__form reveal">
             <form class="form card glass" id="contactForm" novalidate>
-              <h3 class="card__title">Send Message</h3>
+              <h3 class="card__title">Kirim Pesan</h3>
 
               <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="full name" autocomplete="name" required />
+                <label for="name">Nama</label>
+                <input id="name" name="name" type="text" placeholder="Nama lengkap" autocomplete="name" required />
                 <small class="error" data-error-for="name"></small>
               </div>
 
               <div class="field">
                 <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="email.com" autocomplete="email" required />
+                <input id="email" name="email" type="email" placeholder="nama@email.com" autocomplete="email" required />
                 <small class="error" data-error-for="email"></small>
               </div>
 
               <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" rows="5" placeholder="Ceritakan tentang proyek yang ingin kamu buat..." required></textarea>
                 <small class="error" data-error-for="message"></small>
               </div>
 
               <button class="btn btn--primary btn--full" type="submit">
                 <i class="fa-solid fa-paper-plane"></i>
-                Send Message
+                Kirim Pesan
               </button>
 
               <p class="muted small">
-                This form uses client-side validation + toast notification.
+                Formulir ini menggunakan validasi di browser dan notifikasi.
               </p>
             </form>
           </div>
@@ -1036,7 +1338,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <footer class="footer">
     <div class="container footer__grid">
       <p class="muted">
-        © <span id="year"></span> Faiz.dev — Built with passion and precision.
+        © <span id="year"></span> Faiz.dev — Made with Love and Code. All rights reserved.
       </p>
 
       <div class="footer__social">
@@ -1070,12 +1372,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const message = document.getElementById("message").value.trim();
 
     if (!name || !email || !message) {
-      alert("Please fill all fields!");
+      alert("Mohon isi semua kolom!");
       return;
     }
 
     const waNumber = "6285780255134"; // ganti dengan nomor WhatsApp kamu
-    const template = `Hello, my name is ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const template = `Halo, nama saya ${name}\nEmail: ${email}\nPesan: ${message}`;
     const waURL = `https://wa.me/${waNumber}?text=${encodeURIComponent(template)}`;
 
     window.open(waURL, "_blank");
